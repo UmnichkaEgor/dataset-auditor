@@ -33,7 +33,7 @@ def scan_directory(dirpath):
         return {"error":"Directory not found"}
     for i in os.listdir(dirpath):
         if i.endswith(".json"):
-            results[i] = insepct_json(os.path.join(dirpath, i))
+            results[i] = inspect_json(os.path.join(dirpath, i))
         elif i.endswith(".log"):
             results[i] = parse_log(os.path.join(dirpath, i))
     return results
